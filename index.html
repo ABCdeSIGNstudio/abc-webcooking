@@ -5,72 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ウェブコーディングABC</title>
-    <style>
-        body{
-            /* margin: 0; */
-            background: #fee;
-        }
-        header{
-            background-color: grey;
-            color: white;
-        }
-        footer{
-            background-color: black;
-            color: white;
-        }
-        h2{
-            color: #880000;
-            border: 1px solid #800;
-            border-left: 10px solid #800;
-        }
-        h3{
-            color: #888;
-            border-bottom: 2px solid #888;
-            border-top: 1px solid #aaa;
-        }
-        h4, h5, h6{
-            font-size: 17px;
-            color: #888;
-            border-left: 5px solid #888;
-            margin: 0;
-        }
-        h5{
-            font-weight: normal;
-        }
-        h6{
-            font-weight: normal;
-            font-style: italic;
-            border: none;
-        }
-        p{
-            font-size: 14.5px;
-        }
-</style>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://kit.fontawesome.com/f11a77c590.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>見出し1</h1>
-        <nav>
-            <a href="index.html">■トップページ</a>
-            <a href="inline-block.html">■インライン/ブロック要素</a>
-            <a href="tag.html">■頻出タグ</a>
-            <a href="http://www.htmq.com/">■クイックリファレンス</a>
-        </nav>
+			<div class="container pt-1">
+				<h1>ウェブコーディング講座</h1>
+			</div>
+			<nav class="mt-1 p-1 bdb-1">
+				<div class="container">
+					<a href="index.html" class="pr-1"><i class="fas fa-home"></i>トップページ</a>
+					<a href="inline-block.html" class="pr-1"><i class="fas fa-cube"></i>インライン/ブロック要素</a>
+					<a href="tag.html" class="pr-1"><i class="fas fa-tags"></i>頻出タグ</a>
+					<a href="http://www.htmq.com/" class="pr-1"><i class="fas fa-tags"></i>クイックリファレンス</a>
+				</div>
+			</nav>
     </header>
-    <main>
-        <h2>見出し2</h2>
-        <img src="https://images.pexels.com/photos/933701/pexels-photo-933701.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" width="320px">
-        <h3>見出し3</h3>
-        <p>テキストテキスト<br>テキスト</p>
-        <h4>見出し4</h4>
-        <p>テキストテキスト<br>テキスト</p>
-        <h5>見出し5</h5>
-        <p>テキストテキスト<br>テキスト</p>
-        <h6>見出し6</h6>
-        <p>テキストテキスト<br>テキスト</p>
+    <main class="p-1 mt-1 mb-3">
+			<div class="container">
+				<p>
+					このページでは基本的なHTMLの構造や使い方を学んでいきます。
+				</p>
+				
+				<h2 class="mt-3 bg-sub1">＜○○＞HTMLタグの基本的な書き方＜/○○＞</h2>
+				<p class="mt-1">
+					HTMLタグでは多くのタグが中身を囲むように始まりのタグと終わりのタグを組み合わせて以下の形で書きます。
+				</p>
+				<p class="bd-1 bd-primary p-1 mt-1 d-inline-block bg-white">
+					<span class="fz-12 fw-bold">＜開始タグ＞内容＜/終了タグ＞</span><br>
+					<span class="fz-08">開始タグと終了タグは同じものを使い、終了タグには「/(スラッシュ)」を入れて終わりを示します。<br>
+						開始タグの中には属性が入る場合がほとんどですがここでは省略し、次で説明します。<br>
+						主なタグ：div/h1/h2/h3/h4/p/a/span/ul/li/form/html/body/ などなど</span>
+				</p>
+				<p class="mt-3">
+					中身を囲む必要のないタグは以下のような形で書きます。
+				</p>
+				<p class="bd-1 bd-sub2 p-1 mt-1 d-inline-block bg-white">
+					<span class="fz-12 fw-bold">＜開始タグ タグの属性="属性情報"＞</span><br>
+					<span class="fz-08">タグの属性とは例えば画像であればファイルの場所や画像の大きさを指定したり、タグによって様々な属性があります。<br>
+					開始タグ終了タグで囲まないため閉じカッコの前に「/」を入れて終了を示す書き方もあります。<br>
+					主なタグ：img/hr/input/meta/ など</span>
+				</p>
+				<p class="mt-1">
+				</p>
+				<h3 class="mt-3">そもそもHTMLって何？</h3>
+				<p class="mt-1">
+					HTMLとはハイパーテキストマークアップランゲージの略で、文書の構造を示す言語です。<br>
+					主にインターネット閲覧用のブラウザで読み込んで表示処理されます。<br>
+					HTMLは構造を表す担当で、他にCSSでデザインを指定し、JavaScript等で動きをつけたりします。
+				</p>
+				<p class="bd-1 p-1 mt-1 d-inline-block fw-bold bg-white">
+					<span class="color-complement-3 d-inline-block txt-center" style="width:18em;"><ruby>HTML<rt>ハイパーテキストマークアップランゲージ</rt></ruby></span>…文章の内容や順序など構造担当。<br>
+					<span class="color-secondary-1-3 d-inline-block txt-center" style="width:18em;"><ruby>CSS<rt>カスケーティングスタイルシート</rt></ruby></span>…色やレイアウトなどデザイン担当<br>
+					<span class="color-primary-3 d-inline-block txt-center" style="width:18em;"><ruby>JavaScript<rt>ジャバスクリプト</rt></ruby></span>…動きや計算、プログラム処理担当
+				</p>
+				<p class="mt-1">ウェブサイトはこれらのファイルや画像データなどを読み込んでブラウザで表示されています。</p>
+
+				<h2 class="mt-3 bg-sub1">見出しタグ</h2>
+				<p class="mt-1">
+					htmlタグはデザインのために用いるのではなく構造を示すものです。<br>
+					特に見出しタグはSEOでも重要視される要素なので順序正しく使用しましょう。<br>
+				</p>
+				<h3 class="mt-3">見出しタグの書き方</h3>
+				<p class="mt-1">
+					見出しタグは中身を囲むように始まりのタグと終わりのタグを組み合わせて以下の形で書きます。
+				</p>
+				<p class="bd-1 bd-primary p-1 mt-1 d-inline-block bg-white">
+					<span class="fz-12 fw-bold">＜h〇＞見出しの内容＜/h〇＞</span><br>
+					<span class="fz-08">〇の中には1～6の数字が入り、それぞれ見出しの重要レベルを表します。</span>
+				</p>
+				
+				<h3 class="mt-3">見出しタグの使い方</h3>
+				<div class="clearfix">
+					<img src="https://no-mark.jp/wp-content/uploads/2017/07/html-h1_d.png" alt="" width="370" class="p-1 float-left">
+					<p class="pt-1">
+						hタグには見出しという通り文書自体の意味を表す意味があり、順序正しく使う必要があります。<br>
+					</p>
+					<h4 class="d-inline-block mt-1">H1を使う場所</h4>
+					<p class="mt-1">
+						＜h1＞はページ内に一つが望ましいです。そのページの内容を表すタイトルとなるような部分に用いましょう。<br>
+						トップページではサイトのタイトルロゴに、下層ページではそのページのタイトル部分に用いる事が多いです。<br>
+					</p>
+					<h4 class="d-inline-block mt-1">H2～H6を使う場所</h4>
+					<p class="mt-1">
+						＜h2＞はh1の次の大見出しです。h1より後に重要度の高い見出しとして用いましょう。<br>
+						数字が同じものは同レベルの内容の時に用いて、小さいものの後に大きいものを用いるとそれ以前の同レベルの段落とは別の内容へ移る意味になります。
+					</p>
+				</div>
+
+				<h2 class="mt-3 bg-sub1 d-flex">IMGタグ…画像を表示させるタグ</h2>
+				<img src="img/laptoPc.jpg" alt="" width="250" class="mt-1">
+				<p class="mt-1">
+					上のような画像を貼り付けるには＜img＞タグを使います。<br>
+				</p>
+				<h3 class="mt-1">IMGタグの書き方</h3>
+				<p class="bd-1 p-1 mt-1 d-inline-block fw-bold">
+					＜img src="ファイルの指定" alt="画像の代替テキスト" /＞
+				</p>
+				<p class="mt-1">
+					imgタグは開始タグ終了タグで囲まないため上記のように閉じカッコの前に「/」を入れる書き方もありますが、省略しても問題ないです。<br>
+				</p>
+				<h3 class="mt-1">IMGタグの属性について</h3>
+				<h4 class="mt-1">alt属性…代替テキスト</h4>
+				<p class="mt-1">altは画像が読み込まれない時に表示される画像の代わりとなるテキストです。<br>
+					検索エンジンにもこの部分が解釈されるためSEOの観点から画像の内容を表すテキストを入れるのが望ましいです。<br>
+					特に意味の無い装飾用の画像の場合は指定しなくても構いません。
+				</p>
+				<h4 class="mt-1">width属性…画像の幅/height属性…画像の高さ</h4>
+				<p class="mt-1">それぞれ画像のサイズを指定します。widthのみの指定やheightのみの片方だけの指定の場合指定していない属性は自動で画像の縦横の比率に合わせて表示されます。<br>
+					どちらも指定した場合はその値に合わせて比率が伸びたり縮んで表示されます。<br>
+					どちらも指定しない場合は元の画像データのサイズで表示されます。<br>
+					HTML本来の文章の構造に関する属性ではないのでCSS側で制御する方が適しています。
+				</p>
+			</div>
     </main>
-    <footer>
-        <small>制作 ©ABC</small>
+    <footer class="p-1">
+			<div class="container">
+				<small>制作 ©ABC</small>
+			</div>
     </footer>
 </body>
 </html>
